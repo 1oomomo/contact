@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT</title>
+    <style>
+        body,main{
+            margin: 0;
+            padding: 0;
+        }
+        main{
+            min-height: calc(100vh - 120px);
+        }
+    </style>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+
+<body>
+    <header>
+        <nav id="SPheader" class="white_text">
+                <div class="header_container">
+                    <a href="" class="header_site">MOMOLIO</a>
+                    <div id="hum_icn" onclick="humActive(this.id,this.className)">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div id="modal_menu">
+                        <div class="scrim">
+                            <ul class="menu_containor">
+                                <li><a class="hum_menu">HOME</a></li>
+                                <li><a class="hum_menu">ILLUS</a></li>
+                                <li><a class="hum_menu">DESIGN</a></li>
+                                <li><a class="hum_menu">CONTACT</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        
+                </div>
+        </nav>
+        <nav id="PCheader" class="white_text">
+                <div class="header_container">
+                    <a href="" class="header_site hidden_name">MOMORIO</a>
+                    <div class="menu_wrap">
+                        <a class="menu">HOME</a>
+                        <a class="menu">ILLUS</a>
+                        <a class="menu">DESIGN</a>
+                        <a class="menu">CONTACT</a>
+                    </div>
+                </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h1>CONTACT</h1>
+            <p>ご意見、お問い合わせなどお気軽にご連絡ください</p>
+        </section>
+        <section id="form_container">
+            <form
+                action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeW--EJjPpsCGr1EzPQ2zSJQxjMkt0qrZje4PiCb-V8fitHTg/formResponse"
+                method="post" target="hidden_iframe" onsubmit="submitted=true;">
+                <ul>
+                    <li>
+                        <label class="label" for="name">
+                            <p>お名前</p>
+                            <span>必須</span>
+                        </label>
+                        <input id="name" name="entry.653933178" class="text_field" placeholder="山田 太郎" type="text"
+                            required="required" />
+                    </li>
+                    <li>
+                        <label class="label" for="adress">
+                            <p>メールアドレス</p>
+                        </label>
+                        <div class="field_subtext">
+                            <input id="adress" name="entry.742309285" class="text_field" placeholder="xxxxxx@gmail.com"
+                                type="email" />
+                            <span>返信が必要な方はご記入ください</span>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="label" for="name">
+                            <p>内容</p>
+                            <span>必須</span>
+                        </label>
+                        <textarea id="details" name="entry.287276641" class="text_field" rows="10"
+                            placeholder="お問い合わせ内容" required="required"></textarea>
+                    </li>
+                </ul>
+                <div id="submit">
+                    <button type="submit">送信</button>
+                </div>
+            </form>
+            <iframe name="hidden_iframe" style="display:none;" onload="page_transition()"></iframe>
+        </section>
+    </main>
+    <footer>
+        @copylight
+    </footer>
+    <script src="toggle_modal.js"></script>
+    <script>
+        let submitted = false;
+        let page_transition = function () {
+           if (submitted) {
+                window.location = "thanksPage.html";
+            }
+        }
+    </script>
+</body>
+
+</html>
