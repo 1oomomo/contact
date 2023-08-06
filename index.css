@@ -71,7 +71,7 @@ h1 {
     padding: 6px 12px;
     box-sizing: border-box;
     border-radius: 4px;
-    background-color: #965c85;
+    background-color: #b12929;
     color: #fff;
 }
 
@@ -86,7 +86,7 @@ h1 {
 
 .text_field:focus {
     outline: none;
-    border: 3px solid #536cb5;
+    border: 3px solid #965c85;
 }
 
 :placeholder-shown {
